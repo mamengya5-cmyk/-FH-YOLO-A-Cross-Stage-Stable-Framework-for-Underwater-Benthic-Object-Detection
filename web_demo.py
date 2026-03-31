@@ -1,20 +1,11 @@
-#!/usr/bin/env python
-# -*- coding: UTF-8 -*-
-'''
-@Project ：step3_start_window_track.py 
-@File    ：web_demo.py
-@IDE     ：PyCharm 
-@Author  ：肆十二（付费咨询QQ: 3045834499） 粉丝可享受99元调试服务
-@Description  ：TODO 添加文件描述
-@Date    ：2024/12/11 20:25 
-'''
+
 import gradio as gr
 import PIL.Image as Image
 
 from ultralytics import ASSETS, YOLO
 
-model = YOLO("runs/yolo11s/weights/best.pt") # todo 需要在这个位置修改为你自己的模型地址
-TITLE = "欢迎使用基于yolov1w的无人机视角目标检测"
+model = YOLO("runs/yolo11s/weights/best.pt") # todo 
+TITLE = "欢迎使用基于yolov11的目标检测系统"
 
 def predict_image(img, conf_threshold, iou_threshold):
     """Predicts objects in an image using a YOLO11 model with adjustable confidence and IOU thresholds."""
